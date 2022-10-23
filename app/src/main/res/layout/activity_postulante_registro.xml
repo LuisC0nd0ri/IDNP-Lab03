@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity_PostulanteRegistro">
+
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Registro de datos Postulante"
+        android:textSize="22dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.027" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="428dp"
+        android:layout_height="518dp"
+        android:layout_marginTop="12dp"
+
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView17"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-9dp">
+
+
+        <LinearLayout
+            android:layout_width="104dp"
+            android:layout_height="473dp"
+            android:layout_margin="12dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="5dp"
+
+            tools:visibility="visible">
+
+            <TextView
+                android:id="@+id/txtNombres"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:padding="10dp"
+                android:text="Nombres : "
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/txtPaterno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:padding="10dp"
+                android:text="Apellido Paterno : "
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/txtMaterno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:padding="10dp"
+                android:text="Apellido Materno :"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/txtFecNacimiento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:padding="10dp"
+                android:text="FechaNacimiento :"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/txtColegio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:padding="10dp"
+                android:text="Colegio "
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/txtCurso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:padding="10dp"
+                android:text="Carrera a Postular"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/txtDNI"
+                android:layout_width="39dp"
+                android:layout_height="wrap_content"
+                android:text="DNI" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="1.57in"
+            android:layout_height="478dp"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+
+            <EditText
+                android:id="@+id/editNombres"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="22dp"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/editPaterno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="22dp"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/editMaterno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="22dp"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/editFecNacimiento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="22dp"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/editColegio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="22dp"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/editCarrera"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/editDNI"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnRegistro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:text="Registrar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.916" />
+
+    <TextView
+        android:id="@+id/txtMensaje"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="..."
+        android:textSize="29dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.827" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
