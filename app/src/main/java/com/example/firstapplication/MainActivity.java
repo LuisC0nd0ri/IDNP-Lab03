@@ -3,6 +3,7 @@ package com.example.firstapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -29,6 +30,10 @@ public class MainActivity extends AppCompatActivity {
                 if (usuario.equals("admin") && password.equals("1234")) {
                     Log.d(TAG,"valida," + usuario + "," + password);
                     txtMensaje.setText("Autenticacion valida");
+
+                    Intent intent = new Intent(getApplicationContext(), ActivityMenu.class);
+                    startActivity(intent);
+
                 } else {
                     txtMensaje.setText("Autenticacion no valida");
                     Log.d(TAG,"invalido," + usuario + "," + password);
