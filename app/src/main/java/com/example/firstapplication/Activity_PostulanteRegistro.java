@@ -2,6 +2,7 @@ package com.example.firstapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -15,13 +16,12 @@ public class Activity_PostulanteRegistro extends AppCompatActivity {
 
     private static String TAG = "Activity_PostulanteRegistro";
 
-    private void resetForm(EditText form[], TextView txtMensaje) throws InterruptedException {
+    private void resetForm(EditText form[]) throws InterruptedException {
         TimeUnit.SECONDS.sleep(1);
 
         for (int i = 0; i < form.length; i++) {
             form[i].setText("");
         }
-        txtMensaje.setText("");
     }
 
     @Override
@@ -40,20 +40,28 @@ public class Activity_PostulanteRegistro extends AppCompatActivity {
                 findViewById(R.id.editDNI)
         };
 
-
-        TextView txtMensaje = findViewById(R.id.txtMensaje);
         Button btnRegistrar = (Button) findViewById(R.id.btnRegistro);
+
+        Button btnSalir = (Button) findViewById(R.id.buttonQuit);
 
         btnRegistrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                txtMensaje.setText("Registro  Exitoso");
+                //Registro  Exitoso
                 registro.add(Postulante.createPostulante(form));
                 try {
-                    resetForm(form, txtMensaje);
+                    resetForm(form);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
+            }
+        });
+
+        btnSalir.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), ActivityMenu.class);
+                startActivity(intent);
             }
         });
     }

@@ -2,8 +2,8 @@ package com.example.firstapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -36,7 +36,9 @@ public class ActivityPostulanteInfo extends AppCompatActivity {
         TextView txtFechaN = findViewById(R.id.textFN);
         TextView txtColegio = findViewById(R.id.textColegio);
         TextView txtCarrera = findViewById(R.id.textCarrera);
+
         Button btnBuscar = (Button) findViewById(R.id.botonbuscar);
+        Button btnAtras = (Button) findViewById(R.id.botonAtras);
 
         btnBuscar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,5 +66,12 @@ public class ActivityPostulanteInfo extends AppCompatActivity {
             }
         });
 
+        btnAtras.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), ActivityMenu.class);
+                startActivity(intent);
+            }
+        });
     }
 }
